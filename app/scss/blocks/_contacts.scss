@@ -14,6 +14,7 @@
   @include mq-min(992px) {
     width: calc((100% - 3rem) / 2);
     margin-right: 3rem;
+    margin-bottom: 0;
 
     &:last-child {
       margin-right: 0;

@@ -2,15 +2,14 @@
   position: relative;
 
   @include mq-min(768px) {
-    padding-top: 40px;
+    padding-top: 45px;
   }
 }
 
 .main-header {
-  padding-top: rem(10);
-  padding-bottom: rem(10);
+  padding-top: rem(5);
+  padding-bottom: rem(5);
   transition: background-color $duration;
-  // outline: 1px solid tomato;
 
   &--sticky {
     position: fixed;
@@ -39,7 +38,7 @@
 }
 
 .main-header--sticky .main-header__logo {
-  transform: scale(0.8);
+  transform: scale(0.6);
 }
 
 .main-header__phone {
@@ -48,7 +47,12 @@
 
 .main-header__callback {
   margin-right: rem(50);
+}
 
+.main-header--sticky .main-header__callback {
+  padding-top: rem(9);
+  padding-bottom: rem(9);
+  font-size: rem(14);
 }
 
 .main-header__toggler {

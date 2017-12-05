@@ -1,12 +1,10 @@
 .section {
   position: relative;
-  // outline: 1px solid tomato;
 }
 
 .section__inner {
   padding-top: ($grid-gutter-width * 1.8);
   padding-bottom: ($grid-gutter-width * 1.8);
-  // outline: 1px solid #F9ED69;
 }
 
 .section__title {
@@ -18,7 +16,7 @@
   text-transform: uppercase;
   color: $secondary-color;
 
-  @include mq-min(1024px) {
+  @include mq-min(1280px) {
     display: flex;
     align-items: center;
     position: absolute;
