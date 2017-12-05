@@ -37,6 +37,10 @@
   }
 }
 
+.contact-channels__item-image {
+  margin-right: 0.75em;
+}
+
 .contact-channels__item-caption {
   font-size: rem(18);
   font-family: $secondary-font;
@@ -46,5 +50,5 @@
 }
 
 .contact-channels__item-text {
-
+  @include clear-mr-edges-elem();
 }
