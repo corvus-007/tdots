@@ -1,0 +1,11 @@
+.phone-header {
+  font-size: rem(24);
+  font-family: $secondary-font;
+  text-decoration: none;
+  color: $white-color;
+  transition: color $duration;
+
+  @include mq-max(767px) {
+    display: none;
+  }
+}

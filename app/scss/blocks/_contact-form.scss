@@ -1,0 +1,16 @@
+.contact-form {
+
+}
+
+.contact-form__submit-wrapper {
+  margin-top: rem(40);
+
+  @include mq-max(991px) {
+    text-align: center;
+  }
+}
+
+.contact-form__submit {
+  @include make-button();
+  @include --button-action();
+}

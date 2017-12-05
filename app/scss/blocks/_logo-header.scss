@@ -1,0 +1,15 @@
+.logo-header {
+
+}
+
+
+.logo-header__link {
+}
+
+.logo-header__image {
+  vertical-align: middle;
+
+  @include mq-max(567px) {
+    max-width: 45px;
+  }
+}

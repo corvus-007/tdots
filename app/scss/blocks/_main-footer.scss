@@ -1,0 +1,39 @@
+.main-footer {
+  font-size: rem(15);
+  background-color: #000102;
+}
+
+.main-footer__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: rem(25);
+  padding-bottom: rem(25);
+  border-top: 1px solid #05121b;
+
+  @include mq-min(568px) {
+    flex-direction: row;
+  }
+}
+
+.main-footer__column {
+  margin-bottom: rem(40);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include mq-min(568px) {
+    margin-bottom: 0;
+    margin-right: rem(40);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.main-footer__copy {
+
+}

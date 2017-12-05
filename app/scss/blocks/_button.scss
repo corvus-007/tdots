@@ -1,0 +1,118 @@
+@mixin make-button() {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: rem(250);
+  padding: rem(16) rem(15);
+  text-align: center;
+  font-weight: normal;
+  font-size: rem(16);
+  font-family: $secondary-font;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: normal;
+  outline: none;
+  user-select: none;
+  background-color: transparent;
+  border: 2px solid;
+  // letter-spacing: 0.1rem;
+  box-sizing: border-box;
+  border-radius: rem(60);
+  transition-property: all;
+  transition-duration: ($duration * 1.5);
+  cursor: pointer;
+}
+
+@mixin --button-small() {
+  padding-top: rem(8);
+  padding-bottom: rem(8);
+  font-size: rem(14);
+}
+
+@mixin --button-large() {
+  padding: rem(18) rem(40);
+  font-size: rem($font-size--large);
+}
+
+@mixin --button-large() {
+  padding: rem(18) rem(40);
+  font-size: rem($font-size--large);
+}
+
+@mixin --button-white() {
+  background-color: $white-color;
+  color: $black-color;
+  border-color: $white-color;
+  box-shadow: 0 0 rem(37) $white-color;
+
+  &:hover,
+  &:focus {
+    color: $black-color;
+    background-color: $white-color;
+    border-color: $white-color;
+    box-shadow: 0 0 rem(37) $white-color;
+  }
+
+  &:active {
+    box-shadow: 0 0 rem(37) $accent-color;
+  }
+}
+
+@mixin --button-outline-white() {
+  color: $white-color;
+  border-color: $white-color;
+
+  &:hover,
+  &:focus {
+    color: $black-color;
+    background-color: $white-color;
+    border-color: $white-color;
+    box-shadow: 0 0 rem(37) $white-color;
+  }
+
+  &:active {
+    box-shadow: 0 0 rem(37) $accent-color;
+  }
+}
+
+@mixin --button-action() {
+  color: $black-color;
+  background-color: $accent-color;
+  border-color: $accent-color;
+  box-shadow: 0 0 rem(37) $accent-color;
+
+  &:hover,
+  &:focus {
+    color: $black-color;
+    background-color: $white-color;
+    border-color: $white-color;
+    box-shadow: 0 0 rem(37) $white-color;
+  }
+
+  &:active {
+    box-shadow: 0 0 rem(37) $accent-color;
+  }
+}
+
+@mixin --button-submit() {
+  color: $white-color;
+  background-color: $black-color;
+  border-color: $black-color;
+  // box-shadow: 0 0 0 $accent-color;
+
+  &:hover,
+  &:focus {
+    color: $white-color;
+    background-color: $gray-51;
+    border-color: $gray-51;
+    box-shadow: 0 0 rem(37) $gray-51;
+  }
+
+  &:active {
+    box-shadow: 0 0 rem(37) $accent-color;
+  }
+}
+
+.button {
+  @include make-button();
+}

@@ -1,0 +1,92 @@
+.callback-telegram {
+  position: relative;
+  padding-bottom: 3rem;
+  text-align: center;
+  font-size: rem(24);
+}
+
+.callback-telegram__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.callback-telegram__title {
+  margin: 0;
+  margin-bottom: rem(15);
+  font-size: rem(30);
+  font-family: $third-font;
+  color: #1a7cac;
+
+  &::before {
+    content: "";
+    display: block;
+    width: rem(100);
+    height: rem(100);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: rem(10);
+    border-radius: 50%;
+    background: $white-color url("images/telegram.svg") no-repeat center / contain;
+  }
+}
+
+.callback-telegram__text {
+  @include clear-mr-edges-elem();
+
+  margin-bottom: rem(30);
+}
+
+.callback-telegram__button {
+  @include make-button;
+  @include --button-white();
+}
+
+.callback-telegram__backgrounds {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.callback-telegram__backgrounds-item {
+  position: absolute;
+  display: block;
+  height: 2rem;
+
+  &:nth-child(1) {
+    right: 0;
+    bottom: 1rem;
+    width: 50vw;
+    height: rem(130);
+    background-color: #203f56;
+    border-radius: rem(130) 0 0 rem(130);
+  }
+
+  &:nth-child(2) {
+    left: 0;
+    bottom: 0;
+    width: 66vw;
+    height: rem(178);
+    background-color: #0f2f45;
+    border-radius: 0 rem(178) rem(178) 0;
+  }
+
+  &:nth-child(3) {
+    right: 0;
+    top: 2.5rem;
+    width: 65vw;
+    height: rem(225);
+    background-color: #051a28;
+    border-radius: rem(225) 0 0 rem(225);
+  }
+
+  &:nth-child(4) {
+    left: 0;
+    top: 1rem;
+    width: 56vw;
+    height: rem(283);
+    background-color: #05131c;
+    border-radius: 0 rem(283) rem(283) 0;
+  }
+}

@@ -1,0 +1,14 @@
+.section-clients-reviews {
+  background-color: $secondary-color-2;
+}
+
+.section-clients-reviews__inner {
+  @include make-container();
+
+  padding: 0;
+
+  @include mq-min(736px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

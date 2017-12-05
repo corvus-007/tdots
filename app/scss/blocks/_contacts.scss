@@ -1,0 +1,27 @@
+.contacts {
+  @include mq-min(992px) {
+    display: flex;
+  }
+}
+
+.contacts__module {
+  margin-bottom: rem(50);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include mq-min(992px) {
+    width: calc((100% - 3rem) / 2);
+    margin-right: 3rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @include mq-min(1280px) {
+    width: calc((100% - 5rem) / 2);
+    margin-right: 5rem;
+  }
+}

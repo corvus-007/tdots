@@ -1,0 +1,10 @@
+.callback-header {
+  @include make-button();
+  @include --button-action();
+
+  box-shadow: none;
+
+  @include mq-max(567px) {
+    display: none;
+  }
+}

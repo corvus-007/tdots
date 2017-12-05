@@ -1,0 +1,35 @@
+.popup {
+  width: calc(100% - #{($grid-gutter-width / 2)});
+  max-width: rem(500);
+  padding: ($grid-gutter-width * 1);
+  color: $black-color;
+
+  @include mq-min(768px) {
+    padding: ($grid-gutter-width * 2);
+  }
+}
+
+.popup__title {
+  margin: 0;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: $third-font;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  font-size: 1.65rem;
+}
+
+.popup__text {
+  margin-bottom: 1.5rem;
+  font-size: rem(16);
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+
+  @include mq-min(768px) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
