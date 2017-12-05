@@ -55,8 +55,8 @@
 
 .client-reviews-slider__item {
 
-  @include mq-range(0px, 615px) {
-    padding-left: 6vw;
-    padding-right: 6vw;
+  @include mq-max(615px) {
+    padding-left: 10vw;
+    padding-right: 10vw;
   }
 }

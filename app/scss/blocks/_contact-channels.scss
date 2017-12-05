@@ -15,7 +15,8 @@
 }
 
 .contact-channels__item-link {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   margin-bottom: 0.5rem;
   color: $accent-color-2;
   text-decoration: none;
@@ -24,16 +25,6 @@
   &:hover,
   &:focus {
     color: $white-color;
-  }
-
-  &::after {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    width: 1em;
-    height: 1em;
-    margin-left: 0.5em;
-    background: url("images/external-link.svg") no-repeat center / contain;
   }
 }
 
@@ -46,7 +37,28 @@
   font-family: $secondary-font;
   vertical-align: middle;
   text-transform: uppercase;
-  border-bottom: 1px solid;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    margin-left: 0.5em;
+    background: url("images/external-link.svg") no-repeat center / contain;
+  }
+
+  span {
+    border-bottom: 1px solid;
+    vertical-align: middle;
+  }
+
+  @include mq-max(567px) {
+    &::after {
+      width: 0.8em;
+      height: 0.8em;
+    }
+  }
 }
 
 .contact-channels__item-text {

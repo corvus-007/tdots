@@ -2,13 +2,11 @@
   position: relative;
 
   @include mq-min(768px) {
-    padding-top: 45px;
+    padding-top: 50px;
   }
 }
 
 .main-header {
-  padding-top: rem(5);
-  padding-bottom: rem(5);
   transition: background-color $duration;
 
   &--sticky {
