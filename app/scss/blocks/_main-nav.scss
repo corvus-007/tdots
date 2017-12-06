@@ -17,7 +17,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  text-align: center;
+  text-align: right;
+  white-space: nowrap;
 
   li {
 
@@ -25,7 +26,7 @@
 
   a {
     display: block;
-    padding: 0.8rem 0.5rem;
+    padding: 0.8rem 2rem;
     font-size: rem(30);
     color: $base-color;
     text-decoration: none;

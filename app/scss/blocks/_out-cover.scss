@@ -1,13 +1,13 @@
 .out-cover {
   position: fixed;
-  left: 0;
+  // left: 0;
   top: 0;
   right: 0;
   bottom: 0;
   height: 100%;
   z-index: 20;
-  transform-origin: 0 50%;
-  transform: translateX(-100%);
+  max-width: rem(500);
+  transform: translateX(100%);
   color: $base-color;
   background-color: $black-color;
   transition: transform 0.4s ease, visibility 0s $duration;
@@ -21,6 +21,10 @@
     pointer-events: auto;
     visibility: visible;
     transition: transform 0.4s ease;
+  }
+
+  @include mq-min(768px) {
+    width: 35vh;
   }
 }
 
