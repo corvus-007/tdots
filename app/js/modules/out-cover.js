@@ -9,7 +9,6 @@ window.outCover = (function() {
   var outCoverMainNavWrapper = outCover.querySelector(
     '.out-cover__main-nav-wrapper'
   );
-  var outCoverFooter = outCover.querySelector('.out-cover__footer');
   var outCoverToggler = document.querySelector('.out-cover-toggler');
   var outCoverClose = outCover.querySelector('.out-cover__close');
   var scrollWidth = window.util.getScrollbarWidth();
@@ -17,6 +16,18 @@ window.outCover = (function() {
 
   var onOutCoverEscPress = function(event) {
     if (event.keyCode === window.util.KEYCODE_ESC) {
+      hideOutCover();
+    }
+  };
+
+  var onOutCoverClickOut = function(event) {
+    var isClickOut = true;
+
+    if (outCover.contains(event.target)) {
+      isClickOut = false;
+    }
+
+    if (isClickOut) {
       hideOutCover();
     }
   };
@@ -34,19 +45,23 @@ window.outCover = (function() {
   var showOutCover = function() {
     scrollPageValue = window.pageYOffset;
     outCoverBody.style.height =
-      'calc(100% - (' +
-      getSumHeight(outCoverCloseWrapper, outCoverFooter) +
-      'px))';
+      'calc(100% - (' + getSumHeight(outCoverCloseWrapper) + 'px))';
     document.body.classList.add('no-scroll');
+    document.body.classList.add('is-out-cover-show');
     outCover.classList.add('out-cover--opened');
     document.addEventListener('keydown', onOutCoverEscPress);
+    setTimeout(function() {
+      document.addEventListener('click', onOutCoverClickOut);
+    }, 100);
   };
 
   var hideOutCover = function() {
     outCover.classList.remove('out-cover--opened');
     document.body.classList.remove('no-scroll');
+    document.body.classList.remove('is-out-cover-show');
     window.scrollTo(0, scrollPageValue);
     document.removeEventListener('keydown', onOutCoverEscPress);
+    document.removeEventListener('click', onOutCoverClickOut);
   };
 
   outCoverToggler.addEventListener('click', function(event) {
