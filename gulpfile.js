@@ -62,8 +62,7 @@ gulp.task('modules-js', function() {
       'app/js/modules/util.js',
       'app/js/modules/main-header.js',
       'app/js/modules/welcome.js',
-      'app/js/modules/out-cover.js',
-      'app/js/modules/stick-dots.js'
+      'app/js/modules/out-cover.js'
     ])
     .pipe(concat('modules.js'))
     .pipe(gulp.dest('build/js'))
