@@ -19,6 +19,13 @@
   }
 }
 
+@mixin on-make-blur($context-selector) {
+  transition: filter $duration;
+  #{$context-selector} & {
+    filter: blur(3px);
+  }
+}
+
 @mixin dotted-link($size: 2px) {
   border-bottom: $size solid transparent;
   background-origin: border-box;
