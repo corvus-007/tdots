@@ -20,9 +20,11 @@
 }
 
 @mixin on-make-blur($context-selector) {
-  transition: filter $duration;
-  #{$context-selector} & {
-    filter: blur(3px);
+  @include mq-min(768px) {
+    transition: filter $duration;
+    #{$context-selector} & {
+      filter: blur(7px);
+    }
   }
 }
 
