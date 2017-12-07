@@ -19,6 +19,11 @@
     z-index: 2;
     background-color: $black-color;
   }
+
+  @include mq-max(600px) {
+    padding-top: rem(4);
+    padding-bottom: rem(4);
+  }
 }
 
 .main-header__inner {

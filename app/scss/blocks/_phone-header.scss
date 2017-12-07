@@ -5,7 +5,7 @@
   color: $white-color;
   transition: color $duration;
 
-  @include mq-max(767px) {
+  @include mq-max(910px) {
     display: none;
   }
 }

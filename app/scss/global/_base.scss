@@ -29,12 +29,14 @@ body {
     opacity: 0.15;
     z-index: -1;
   }
+}
 
-  // &.no-scroll {
-  //   position: fixed;
-  //   overflow: hidden;
-  //   width: 100%;
-  // }
+@include mq-max(767px) {
+  .no-scroll {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+  }
 }
 
 .container {

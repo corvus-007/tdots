@@ -72,6 +72,7 @@
   right: 0;
   bottom: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: rem(20);
@@ -93,4 +94,14 @@
   @include clear-mr-edges-elem();
 
   margin: auto;
+}
+
+.client-reviews__more-wrapper {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.client-reviews__more {
+  @include make-button();
+  @include --button-action();
 }
