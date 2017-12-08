@@ -13,7 +13,6 @@
   font-weight: 600;
   line-height: 1.22;
   overflow: hidden;
-  cursor: pointer;
 
   @include mq-min(568px) {
     width: calc(100% / 2);
@@ -78,16 +77,16 @@
   padding: rem(20);
   overflow-x: hidden;
   overflow-y: auto;
-  transform: scale(1.2);
+  transform: translateY(15%);
   opacity: 0;
   background-color: $secondary-color-2;
   transition: ($duration * 1.5);
 }
 
 .client-reviews__item:hover .client-reviews__item-cover {
-  transform: scale(1);
+  transform: translateY(0);
   opacity: 1;
-  transition-duration: $duration;
+  transition-duration: ($duration * 1.5);
 }
 
 .client-reviews__item-message {
@@ -97,6 +96,7 @@
 }
 
 .client-reviews__more-wrapper {
+  position: relative;
   margin-top: 1rem;
   text-align: center;
 }
