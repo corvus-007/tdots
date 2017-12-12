@@ -77,14 +77,14 @@
   padding: rem(20);
   overflow-x: hidden;
   overflow-y: auto;
-  transform: translateY(15%);
+  transform: translateY(15%) rotateX(-20deg);
   opacity: 0;
   background-color: $secondary-color-2;
   transition: ($duration * 1.5);
 }
 
 .client-reviews__item:hover .client-reviews__item-cover {
-  transform: translateY(0);
+  transform: translateY(0) rotateX(0deg);
   opacity: 1;
   transition-duration: ($duration * 1.5);
 }
