@@ -4,7 +4,7 @@ window.welcome = (function() {
   var welcome = document.querySelector('.welcome');
 
   if (welcome) {
-    welcome.style.minHeight =
+    welcome.style.height =
       'calc(100% - ' + window.mainHeader.wrapper.offsetHeight + 'px)';
   }
 })();
