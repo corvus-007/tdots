@@ -1,15 +1,16 @@
 .welcome {
   @include on-make-blur('.is-out-cover-show');
+}
 
+.welcome__inner {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100%;
+  height: 100%;
   padding-top: 1rem;
   padding-bottom: 1rem;
   text-align: center;
-  // background-color: #000611;
   box-sizing: border-box;
   z-index: 1;
 
@@ -17,6 +18,15 @@
     padding-top: 1rem;
     padding-bottom: 2rem;
     text-align: left;
+  }
+
+  @include mq-min(992px) {
+    background: url("images/bg-welcome.svg") no-repeat calc(100% - 2rem) calc(100% - 30%) / auto 45%;
+  }
+
+  @include mq-min(1024px) {
+    background-position: right;
+    background-size: rem(450);
   }
 }
 
