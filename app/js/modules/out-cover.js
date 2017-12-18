@@ -43,10 +43,10 @@ window.outCover = (function() {
   };
 
   var showOutCover = function() {
-    scrollPageValue = window.pageYOffset;
+    // scrollPageValue = window.pageYOffset;
     outCoverBody.style.height =
       'calc(100% - (' + getSumHeight(outCoverCloseWrapper) + 'px))';
-    document.body.classList.add('no-scroll');
+    // document.body.classList.add('no-scroll');
     document.body.classList.add('is-out-cover-show');
     outCover.classList.add('out-cover--opened');
     document.addEventListener('keydown', onOutCoverEscPress);
@@ -57,9 +57,9 @@ window.outCover = (function() {
 
   var hideOutCover = function() {
     outCover.classList.remove('out-cover--opened');
-    document.body.classList.remove('no-scroll');
+    // document.body.classList.remove('no-scroll');
     document.body.classList.remove('is-out-cover-show');
-    window.scrollTo(0, scrollPageValue);
+    // window.scrollTo(0, scrollPageValue);
     document.removeEventListener('keydown', onOutCoverEscPress);
     document.removeEventListener('click', onOutCoverClickOut);
   };
