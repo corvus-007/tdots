@@ -4,7 +4,12 @@
   justify-content: center;
   height: 100%;
   overflow: auto;
-  background-image: radial-gradient(ellipse at top, rgba(#000, 0.05), transparent 70%), radial-gradient(ellipse at bottom, rgba(#000, 0.05), transparent 70%);
+  background-image: radial-gradient(
+      ellipse at top,
+      rgba(#000, 0.05),
+      transparent 70%
+    ),
+    radial-gradient(ellipse at bottom, rgba(#000, 0.05), transparent 70%);
   background-size: 100% 0.7rem;
   background-repeat: no-repeat;
   background-position: top, bottom;
@@ -21,7 +26,6 @@
   white-space: nowrap;
 
   li {
-
   }
 
   a {
@@ -52,7 +56,8 @@
     }
   }
 
-  .current-menu-item a {
+  .current-menu-item a,
+  .active a {
     color: $accent-color-2;
     cursor: default;
     pointer-events: none;
