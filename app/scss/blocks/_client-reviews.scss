@@ -1,5 +1,4 @@
 .client-reviews {
-
 }
 
 .client-reviews__list {
@@ -12,7 +11,7 @@
 .client-reviews__item {
   font-weight: 600;
   line-height: 1.22;
-  overflow: hidden;
+  perspective: 1200px;
 
   @include mq-min(568px) {
     width: calc(100% / 2);
@@ -31,14 +30,16 @@
   }
 
   @include mq-min(992px) {
-    width: calc(100% / 6);
+    width: (100% / 6);
   }
 }
 
 .client-reviews__item-inner {
   position: relative;
   padding-top: 100%;
-  font-size: rem(16);
+  font-size: rem(14);
+  transform-style: preserve-3d;
+  transition: ($duration * 3);
 
   @include mq-range(568px, 615px) {
     padding-top: 80%;
@@ -47,6 +48,10 @@
   @include mq-max(615px) {
     font-size: rem(20);
   }
+}
+
+.client-reviews__item:hover .client-reviews__item-inner {
+  transform: rotateY(180deg);
 }
 
 .client-reviews__item-imagebox {
@@ -58,10 +63,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  backface-visibility: hidden;
+  transition: opacity $duration;
+}
+
+.client-reviews__item:hover .client-reviews__item-imagebox {
+  opacity: 0;
+  transition: opacity $duration $duration;
 }
 
 .client-reviews__item-image {
-
 }
 
 .client-reviews__item-cover {
@@ -69,24 +80,22 @@
   left: 0;
   top: 0;
   right: 0;
-  bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 100%;
   padding: rem(20);
-  overflow-x: hidden;
-  overflow-y: auto;
-  transform: translateY(15%) rotateX(-20deg);
-  opacity: 0;
-  background-color: $secondary-color-2;
+  transform: translateY(1rem) rotateY(-180deg);
+  background-color: $bg-color;
   transition: ($duration * 1.5);
+  box-sizing: border-box;
+  backface-visibility: hidden;
 }
 
 .client-reviews__item:hover .client-reviews__item-cover {
-  transform: translateY(0) rotateX(0deg);
+  transform: rotateY(-180deg);
   opacity: 1;
-  transition-duration: ($duration * 1.5);
 }
 
 .client-reviews__item-message {
