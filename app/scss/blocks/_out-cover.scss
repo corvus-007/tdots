@@ -24,8 +24,6 @@
 
   @include mq-min(768px) {
     left: auto;
-    width: 35vh;
-    max-width: rem(500);
   }
 }
 
@@ -54,7 +52,7 @@
   background-clip: content-box;
   border: none;
   box-sizing: border-box;
-  transition:color $duration;
+  transition: color $duration;
   cursor: pointer;
 
   &::before,
