@@ -8,8 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     $(clientReviewsSlider).slick({
       accessibility: false,
       dots: true,
-      arrows: false,
-      autoplay: true
+      arrows: false
     });
   }
 
