@@ -6,15 +6,6 @@
   background-color: #000102;
   background-color: $white-color;
 
-  .fancybox-close-small {
-    color: $white-color;
-
-    &::after {
-      color: $white-color;
-      background-color: rgba($white-color, 0.1)
-    }
-  }
-
   @include mq-min(768px) {
     padding: ($grid-gutter-width * 2);
   }
@@ -35,6 +26,14 @@
 
     &::placeholder {
       color: $muted-color;
+    }
+  }
+
+  .form-submit {
+    &:hover,
+    &:focus {
+      color: $white-color;
+      background-color: #333;
     }
   }
 }
