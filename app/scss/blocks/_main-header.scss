@@ -2,6 +2,7 @@
   @include on-make-blur('.is-out-cover-show');
 
   position: relative;
+  z-index: 10;
 
   @include mq-min(768px) {
     padding-top: 50px;
@@ -16,7 +17,6 @@
     left: 0;
     top: 0;
     right: 0;
-    z-index: 2;
     background-color: $black-color;
   }
 
