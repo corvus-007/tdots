@@ -2,10 +2,12 @@
 
   .slick-list {
     width: 100%;
+    overflow: visible;
   }
 
   .slick-track {
     display: flex;
+    margin-bottom: 1rem;
   }
 
   .slick-track:before,
