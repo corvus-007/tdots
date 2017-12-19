@@ -3,6 +3,7 @@
 
   position: relative;
   z-index: 10;
+  padding-top: 5px;
 
   @include mq-min(768px) {
     padding-top: 50px;
