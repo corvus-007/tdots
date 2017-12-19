@@ -34,22 +34,10 @@
 
 .contact-channels__item-caption {
   font-size: rem(18);
-  font-family: $secondary-font;
   vertical-align: middle;
   text-transform: uppercase;
 
-  &::after {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    width: 1em;
-    height: 1em;
-    margin-left: 0.5em;
-    background: url("images/external-link.svg") no-repeat center / contain;
-  }
-
   span {
-    border-bottom: 1px solid;
     vertical-align: middle;
   }
 
