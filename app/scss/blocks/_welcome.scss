@@ -14,18 +14,26 @@
   box-sizing: border-box;
   z-index: 1;
 
+  @media (max-height: 567px) {
+    height: auto;
+    padding-bottom: 2rem;
+    justify-content: initial;
+  }
+
   @include mq-min(768px) {
-    padding-top: 1rem;
+    padding-top: 2rem;
     padding-bottom: 2rem;
     text-align: left;
   }
 
   @include mq-min(992px) {
-    background: url("images/bg-welcome.svg") no-repeat calc(100% - 2rem) calc(100% - 30%) / auto 45%;
+    background: url("images/bg-welcome.svg") no-repeat center;
+    background-position: 95%;
+    background-position: calc(100% - 46px);
+    background-size: auto 45%;
   }
 
   @include mq-min(1024px) {
-    background-position: right;
     background-size: rem(400);
   }
 }
@@ -37,8 +45,12 @@
   line-height: 1.3;
   font-family: $third-font;
 
+  @media (max-height: 567px) {
+    font-size: rem(37);
+  }
+
   @include mq-min(568px) {
-    font-size: rem(55);
+    font-size: rem(45);
   }
 
   @include mq-min(768px) {
@@ -54,6 +66,10 @@
   @include clear-mr-edges-elem();
 
   font-size: rem(24);
+
+  @media (max-height: 568px) {
+    font-size: rem(20);
+  }
 }
 
 .welcome__column {
