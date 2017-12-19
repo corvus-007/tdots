@@ -35,7 +35,7 @@ gulp.task('style', function() {
       .pipe(
         postcss([
           autoprefixer({
-            browsers: ['last 2 version']
+            browsers: ['last 2 version', 'ie 11']
           }),
           mqpacker({
             sort: true
