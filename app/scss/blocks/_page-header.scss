@@ -1,0 +1,10 @@
+.page-header {
+  margin-bottom: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  @include mq-min(768px) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}

@@ -1,0 +1,143 @@
+.cases {
+
+}
+
+.cases__list {
+  @include clear-list();
+}
+
+.cases__item {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: rem(100);
+  font-size: rem(17);
+
+  @include mq-min(667px) {
+    flex-direction: row;
+    align-items: center;
+    font-size: rem(16);
+
+    &:nth-child(2n) {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+  }
+}
+
+.cases__body {
+  @include mq-min(667px) {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: flex-start;
+    flex-grow: 1;
+    z-index: 1;
+  }
+
+  @include mq-max(666px) {
+    // text-align: center;
+  }
+}
+
+.cases__item:nth-child(2n) .cases__body {
+  @include mq-min(667px) {
+    align-items: flex-end;
+  }
+}
+
+.cases__title {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding-bottom: rem(25);
+  font-size: rem(22);
+  font-family: $third-font;
+  line-height: 1.3;
+
+  @include mq-min(568px) {
+    font-size: rem(27);
+  }
+
+  @include mq-min(667px) {
+    max-width: rem(360);
+    margin-bottom: rem(25);
+    font-size: rem(30);
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50%;
+      height: 3px;
+      background-color: $accent-color-2;
+      transition: width ($duration * 2) cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+  }
+}
+
+.cases__item:nth-child(2n) .cases__title {
+  @include mq-min(667px) {
+    margin-left: auto;
+
+    &::before {
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+.cases__item:hover .cases__title {
+  &::before {
+    width: 160%;
+  }
+}
+
+.cases__description {
+  color: #808b92;
+}
+
+.cases__to-case {
+  @include make-button();
+  @include --button-accent-2();
+  @include --button-small();
+
+  margin-top: rem(25);
+}
+
+.cases__image-box {
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+  overflow: hidden;
+
+  @include mq-min(667px) {
+    width: 50%;
+    margin-bottom: 0;
+    margin-left: rem(50);
+  }
+
+  @include mq-min(768px) {
+    width: 55%;
+  }
+}
+
+.cases__item:nth-child(2n) .cases__image-box {
+
+  @include mq-min(667px) {
+    margin-left: 0;
+    margin-right: rem(50);
+  }
+}
+
+.cases__image-box-wrapper {
+  @include make-fit-object(16, 9);
+
+  transition: transform ($duration * 5) ($duration / 2);
+}
+
+.cases__item:hover .cases__image-box-wrapper {
+  transform: scale(1.2);
+}
+
+.cases__image {
+
+}

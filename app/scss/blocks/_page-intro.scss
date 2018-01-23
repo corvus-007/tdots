@@ -1,0 +1,13 @@
+.page-intro {
+  @include clear-mr-edges-elem();
+
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: rem(24);
+
+  @media (max-height: 568px) {
+    font-size: rem(20);
+  }
+}
