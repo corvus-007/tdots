@@ -23,9 +23,10 @@
 }
 
 @mixin --button-small() {
-  padding-top: rem(8);
-  padding-bottom: rem(8);
+  padding-top: rem(12);
+  padding-bottom: rem(12);
   font-size: rem(14);
+  min-width: rem(200);
 }
 
 @mixin --button-large() {
@@ -57,9 +58,11 @@
   }
 }
 
-@mixin --button-outline-white() {
+@mixin --button-accent-2() {
+  background-color: $accent-color-2;
   color: $white-color;
-  border-color: $white-color;
+  border-color: $accent-color-2;
+  box-shadow: 0 0 rem(37) $accent-color-2;
 
   &:hover,
   &:focus {
@@ -70,7 +73,7 @@
   }
 
   &:active {
-    box-shadow: 0 0 rem(37) $accent-color;
+    box-shadow: 0 0 rem(37) $accent-color-2;
   }
 }
 
@@ -86,25 +89,6 @@
     background-color: $white-color;
     border-color: $white-color;
     box-shadow: 0 0 rem(37) $white-color;
-  }
-
-  &:active {
-    box-shadow: 0 0 rem(37) $accent-color;
-  }
-}
-
-@mixin --button-submit() {
-  color: $white-color;
-  background-color: $black-color;
-  border-color: $black-color;
-  // box-shadow: 0 0 0 $accent-color;
-
-  &:hover,
-  &:focus {
-    color: $white-color;
-    background-color: $gray-51;
-    border-color: $gray-51;
-    box-shadow: 0 0 rem(37) $gray-51;
   }
 
   &:active {
