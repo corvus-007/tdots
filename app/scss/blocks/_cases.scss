@@ -26,15 +26,8 @@
 
 .cases__body {
   @include mq-min(667px) {
-    // display: flex;
-    // flex-direction: column;
-    // align-items: flex-start;
     flex-grow: 1;
     z-index: 1;
-  }
-
-  @include mq-max(666px) {
-    // text-align: center;
   }
 }
 
@@ -58,9 +51,10 @@
   }
 
   @include mq-min(667px) {
-    max-width: rem(360);
     margin-bottom: rem(25);
+    padding-right: 2rem;
     font-size: rem(30);
+    box-sizing: border-box;
 
     &::before {
       content: "";
@@ -70,7 +64,7 @@
       width: 50%;
       height: 3px;
       background-color: $accent-color-2;
-      transition: width ($duration * 2) cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transition: width ($duration * 2) ($duration * 2);
     }
   }
 }
@@ -78,6 +72,8 @@
 .cases__item:nth-child(2n) .cases__title {
   @include mq-min(667px) {
     margin-left: auto;
+    padding-left: 2rem;
+    padding-right: 0;
 
     &::before {
       left: auto;
@@ -88,7 +84,8 @@
 
 .cases__item:hover .cases__title {
   &::before {
-    width: 160%;
+    width: calc(100% + #{rem(50)});
+    transition-delay: 0s;
   }
 }
 
@@ -105,14 +102,25 @@
 }
 
 .cases__image-box {
-  margin-bottom: 1rem;
   flex-shrink: 0;
-  overflow: hidden;
+  margin-bottom: 1rem;
 
   @include mq-min(667px) {
+    position: relative;
     width: 50%;
     margin-bottom: 0;
     margin-left: rem(50);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -3px;
+      top: -3px;
+      width: 0;
+      bottom: -3px;
+      background-color: $accent-color-2;
+      transition: ($duration * 2) linear;
+    }
   }
 
   @include mq-min(768px) {
@@ -121,23 +129,30 @@
 }
 
 .cases__item:nth-child(2n) .cases__image-box {
-
   @include mq-min(667px) {
     margin-left: 0;
     margin-right: rem(50);
+
+    &::before {
+      left: auto;
+      right: -3px;
+    }
   }
+}
+
+.cases__item:hover .cases__image-box::before {
+  width: calc(100% + 6px);
+  transition-delay: ($duration * 1.4);
 }
 
 .cases__image-box-wrapper {
   @include make-fit-object(16, 9);
-
-  transition: transform ($duration * 5) ($duration / 2);
-}
-
-.cases__item:hover .cases__image-box-wrapper {
-  transform: scale(1.2);
 }
 
 .cases__image {
+  transition: transform ($duration * 5) ($duration * 1.5);
+}
 
+.cases__item:hover .cases__image {
+  transform: scale(1.2);
 }
