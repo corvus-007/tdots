@@ -135,3 +135,8 @@ span.wpcf7-not-valid-tip {
     color: mix(#000, $success-color, 60%);
   }
 }
+
+.wpcf7-recaptcha > div {
+  margin-left: auto;
+  margin-right: auto;
+}
